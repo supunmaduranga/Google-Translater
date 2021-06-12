@@ -19,10 +19,10 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 # Get a bot token from botfather
 TOKEN = os.environ.get("TOKEN", "")
 
-# Get from my.telegram.org (or @UseTGXBot)
+# Get from my.telegram.org (or @MT_MyTelegramOrg_Bot)
 APP_ID = int(os.environ.get("APP_ID", ""))
 
-# Get from my.telegram.org (or @UseTGXBot)
+# Get from my.telegram.org (or @MT_MyTelegramOrg_Bot)
 API_HASH = os.environ.get("API_HASH", "")
 app = Client(
         "ggt",
@@ -35,9 +35,12 @@ def start(client, message):
             message.reply_text(text =f"🙋‍♂️ Hello **{message.from_user.first_name }\n  **I am simple Google Translater Bot** \n `I can translate any language to you selected language`\n\n**Available Language** \nHindi,Kannada,Malayalam,Tamil,Telugu,English,Urdu,Panjabi,Spanish\n Support @Mo_Tech_Group",reply_to_message_id = message.message_id , parse_mode="markdown", reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🔊 Support 🔊" ,url="https://t.me/Mo_Tech_YT") ],
-                 [InlineKeyboardButton("💥 Subscribe 💥", url="https://youtube.com/channel/UCmGBpXoM-OEm-FacOccVKgQ") ]
-           ]
+                   InlineKeyboardButton("🔊 Support 🔊" ,url="https://t.me/Mo_Tech_YT")
+                ],
+                [
+                   InlineKeyboardButton("💥 Subscribe 💥", url="https://youtube.com/channel/UCmGBpXoM-OEm-FacOccVKgQ")
+                ]
+           ] 
         ) )
 	
 @app.on_message(filters.text & filters.private )
