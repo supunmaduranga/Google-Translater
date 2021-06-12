@@ -32,11 +32,11 @@ app = Client(
     
 @app.on_message(filters.command(['start']))
 def start(client, message):
-            message.reply_text(text =f"Hello **{message.from_user.first_name }** \n\n __I am simple Google Translater Bot \n I can translate any language to you selected language__",reply_to_message_id = message.message_id , parse_mode="markdown", reply_markup=InlineKeyboardMarkup(
+            message.reply_text(text =f"🙋‍♂️ Hello **{message.from_user.first_name }\n  **I am simple Google Translater Bot** \n `I can translate any language to you selected language`\n\n**Available Language** \nHindi,Kannada,Malayalam,Tamil,Telugu,English,Urdu,Panjabi,Spanish\n Support @Mo_Tech_Group",reply_to_message_id = message.message_id , parse_mode="markdown", reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("Support 🇮🇳" ,url="https://t.me/lntechnical") ],
-                 [InlineKeyboardButton("Subscribe 🧐", url="https://youtube.com/c/LNtechnical") ]
+                    InlineKeyboardButton("🔊 Support 🔊" ,url="https://t.me/Mo_Tech_YT") ],
+                 [InlineKeyboardButton("💥 Subscribe 💥", url="https://youtube.com/channel/UCmGBpXoM-OEm-FacOccVKgQ") ]
            ]
         ) )
 	
@@ -62,7 +62,7 @@ def echo(client, message):
  )
 
  
- message.reply_text("Select language 👇",reply_to_message_id = message.message_id, reply_markup = keybord)
+ message.reply_text("✔️Select language 👇",reply_to_message_id = message.message_id, reply_markup = keybord)
     
     
 @app.on_callback_query()
