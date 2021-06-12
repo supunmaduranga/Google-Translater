@@ -32,13 +32,13 @@ app = Client(
     
 @app.on_message(filters.command(['start']))
 def start(client, message):
-            message.reply_text(text =f"🙋‍♂️ Hello **{message.from_user.first_name }\n  **I am simple Google Translater Bot** \n\n `I can translate any language to you selected language`\n\n**Available Language** \n#Hindi #Kannada #Malayalam\n#Tamil #Telugu #English\n#Urdu #Panjabi #Spanish\n\nSupport @Mo_Tech_Group",reply_to_message_id = message.message_id , parse_mode="markdown", reply_markup=InlineKeyboardMarkup(
+            message.reply_text(text =f"🙋‍♂️ Hello **{message.from_user.first_name }\n  **😋I am simple Google Translater Bot😎** \n\n `I can translate any language to you selected language click this button for more information or join support group 🌟`\n\n**🗂️Available Language🗂️** \n #Hindi #Kannada #Malayalam\n#Tamil #Telugu #English\n#Urdu #Panjabi #Spanish\n\nSupport  group @slbotzone",reply_to_message_id = message.message_id , parse_mode="markdown", reply_markup=InlineKeyboardMarkup(
             [
                 [
-                   InlineKeyboardButton("🔊 Support 🔊" ,url="https://t.me/Mo_Tech_YT")
+                   InlineKeyboardButton("👼How to use this bot 👼" ,url="https://t.me/SL_bot_zone/114")
                 ],
                 [
-                   InlineKeyboardButton("💥 Subscribe 💥", url="https://youtube.com/channel/UCmGBpXoM-OEm-FacOccVKgQ")
+                   InlineKeyboardButton("💻How to create this bot 💻", url="https://www.youtube.com/channel/UCvYfJcTr8RY72dIapzMqFQA?sub_confirmation=1")
                 ]
            ] 
         ) )
@@ -48,24 +48,24 @@ def echo(client, message):
  
  keybord = InlineKeyboardMarkup( [
         [
-            InlineKeyboardButton("Hindi", callback_data='hi'),
-            InlineKeyboardButton("Kannada", callback_data='kn'),
-            InlineKeyboardButton("malayalam",callback_data ='ml')
+            InlineKeyboardButton("📝 Hindi 📝", callback_data='hi'),
+            InlineKeyboardButton("📝 Kannada 📝", callback_data='kn'),
+            InlineKeyboardButton("📝 malayalam 📝",callback_data ='ml')
         ],
-        [   InlineKeyboardButton("Tamil", callback_data='ta'),
-        InlineKeyboardButton("Telugu", callback_data='te'),
-        InlineKeyboardButton("English",callback_data = 'en')
+        [   InlineKeyboardButton("📝 Tamil 📝", callback_data='ta'),
+        InlineKeyboardButton("📝 Telugu 📝", callback_data='te'),
+        InlineKeyboardButton("📝 English 📝",callback_data = 'en')
         ],
-        	[InlineKeyboardButton("Urdu",callback_data ="ur"),
-	InlineKeyboardButton("Punjabi",callback_data="pa"),
-	InlineKeyboardButton("Spanish",callback_data="es")
+        	[InlineKeyboardButton("📝 Urdu 📝",callback_data ="ur"),
+	InlineKeyboardButton("📝 Punjabi 📝",callback_data="pa"),
+	InlineKeyboardButton("📝 Spanish 📝",callback_data="es")
 	]
     ]
  
  )
 
  
- message.reply_text("✔️Select language 👇",reply_to_message_id = message.message_id, reply_markup = keybord)
+ message.reply_text("✔️Select your language to translate your text 👇 , or contact my owner @supunma 🇱🇰",reply_to_message_id = message.message_id, reply_markup = keybord)
     
     
 @app.on_callback_query()
